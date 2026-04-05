@@ -1,0 +1,31 @@
+{
+  "name": "namste-react-practice",
+  "version": "1.0.0",
+  "description": "namaste react by mahesh reddy",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahesh7-Mahi/NamasteReact.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Mahesh Reddy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahesh7-Mahi/NamasteReact/issues"
+  },
+  "homepage": "https://github.com/Mahesh7-Mahi/NamasteReact#readme",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
