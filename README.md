@@ -1,7 +1,9 @@
 Namste React 🚀
 
-NOTES:
-    *Inception & Igniting our App*
+# NOTES:
+
+# Inception & Igniting our App
+
 1. npm repository for All the packages(libraries) -> any package include in our project we have to use npm like(maven) in java-spring boot
 2. all the packages hosted in npm
 3. package.json is a configuration for npm and it keeps tracks versions of installed packages
@@ -53,3 +55,28 @@ NOTES:
 12. React Functional component is just a normal javascript function which returns JSX or ReactElement
 13. Component composition -> putting component inside the component
 14. JSX can automatically prevents the csrf attacks from hackers
+
+# Talk is Cheep, Show Me the Code
+1. Food ordering app design
+2. Components
+    - Header
+        - logo
+        - Nav Items
+    - Body
+        - search
+        - RestaurantContainer
+            - RestaurantCard
+                - img
+                - name of restuarant, star rating, cuisine, deleviry time
+    - Footer
+        - copyright
+        - Links
+        - Address
+        - Contact
+3. What is component -> component nothing but normal javascript function that returns piece JSX code
+4. props used to pass dynamic data to component -> props nothing but just normal arguments to a function
+5. passing props to a component -> just like passing argument to a function
+6. we can pass any number of props the javascript wrap to is an Object
+7. we can destructuring on the fly props
+8. config drivin UI
+9. not using keys ( not acceptable), not use index as key, always use unique key
