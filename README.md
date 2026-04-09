@@ -80,3 +80,28 @@ Namste React 🚀
 7. we can destructuring on the fly props
 8. config drivin UI
 9. not using keys ( not acceptable), not use index as key, always use unique key
+
+# Let's Get Hooked
+1. Two types of export/import
+2. Default export/import
+3. export default component
+4. import component from path
+5. named export/import
+6. export const component
+7. import {Component} from "path";
+# React Hooks
+8. React Hook is a normal javascript utility functions
+    - useState() - used to generate state variables
+        - Ex:
+            const [listOfRestaurants, setListOfRestaurants] = useState([]); -> Local state variable - Super powerful variable
+            const listOfRestaurants; -> Normal JS Variable  
+    - useEffect()
+9. Whenever state variable updates React rerender the component
+10. React works on reconciliation algorithm is also known as react fiber
+11. Virtual DOM is an representation of an actual DOM -> representation of virtual DOM nothing but an Javascript Object
+12. What is diff algoritham -> finds out the difference between virtual dom and actual dom and finally updated the actual dom if virtual dom changed
+13. in react 16 new algorithm cames in react fiber
+14. finding out the defference between two HTML document is time taking and fingind out the two objects is faster thats why react always finds out objects defference nothing but DOMs
+15. Why React fast -> Because effcient DOM manupulation
+
+
