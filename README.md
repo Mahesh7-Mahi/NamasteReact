@@ -115,3 +115,19 @@ Namste React 🚀
 5. Shimmar UI
 6. Whenever state variable update, react trigger a reconciliaction cycle(re-render the component)
 
+# Finding the Path
+
+1. useEffect(() => {},[]) Hook having to arguments callback function and dependency array
+2. only call back function is mandatory not dependency array in useEffect Hook
+3. useEffect if no dependency array => useEffect is called on every render
+4. useEffect if empty dependency = [] => useEffect is called on initial render(just once)
+5. useEffect if empty dependency [btnName] => useEffect is called everytime btnName is updated
+6. Create state variables useState variables at starting of the component and not write in outside the component
+7. Don't use useState hook in if or else blocks means inside the conditional statements(if,for, while) and inside the functions
+8. useRouteError is also a hook to know error details(like status, StatuSText etc)
+8. React application is single page application
+9. Routing in Web Apps
+    - client side routing
+    - server side routing
+
+
