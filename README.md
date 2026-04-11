@@ -57,6 +57,7 @@ Namste React 🚀
 14. JSX can automatically prevents the csrf attacks from hackers
 
 # Talk is Cheep, Show Me the Code
+
 1. Food ordering app design
 2. Components
     - Header
@@ -82,6 +83,7 @@ Namste React 🚀
 9. not using keys ( not acceptable), not use index as key, always use unique key
 
 # Let's Get Hooked
+
 1. Two types of export/import
 2. Default export/import
 3. export default component
@@ -104,4 +106,12 @@ Namste React 🚀
 14. finding out the defference between two HTML document is time taking and fingind out the two objects is faster thats why react always finds out objects defference nothing but DOMs
 15. Why React fast -> Because effcient DOM manupulation
 
+# Exploring the World
+
+1. Page Loads -> Make API call -> Render the UI (Not Recomanded)
+2. Page Loads -> Render the UI -> Make API call -> Render the UI again( Recomanded)
+3. useEffect() -> have two arguments callback function and another is dependency array
+4. After body component render completed then useEffect call the call back function
+5. Shimmar UI
+6. Whenever state variable update, react trigger a reconciliaction cycle(re-render the component)
 
