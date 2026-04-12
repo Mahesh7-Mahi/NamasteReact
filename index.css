@@ -75,3 +75,8 @@
     margin-left: 5px;
     cursor: pointer;
 }
+
+.nav-link{
+    text-decoration: none;
+    color: inherit;
+}
