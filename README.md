@@ -138,16 +138,14 @@ Namste React 🚀
 4. class component life cycle : constructor() -> render() -> componentDidMount()
 5. While parent and child life cycle : parentConstructor() -> parentRender() -> childConstructor() -> childRender() -> childComponentDidMount() -> parentComponentDidMount()
 6. componentDidMount() used to make an API call
-7.  Parent constructor
-    Parent render
-    
-    Firstchild constructor
-    Firstchild render
-    Secondchild constructor
-    Secondchild render
-
-    <DOM UPDATED - IN A SINGLE BATCH>
-    Firstchild componentDidMount
-    Secondchild componentDidMount
-    parent componentDidMount
-7. ![alt text](<Screenshot 2026-04-13 225754.png>)
+7. Parent constructor
+   Parent render
+   Firstchild constructor
+   Firstchild render
+   Secondchild constructor
+   Secondchild render
+   <DOM UPDATED - IN A SINGLE BATCH>
+   Firstchild componentDidMount
+   Secondchild componentDidMount
+   parent componentDidMount
+8. ![alt text](<Screenshot 2026-04-13 225754.png>)
