@@ -121,7 +121,7 @@ Namste React 🚀
 2. only call back function is mandatory not dependency array in useEffect Hook
 3. useEffect if no dependency array => useEffect is called on every render
 4. useEffect if empty dependency = [] => useEffect is called on initial render(just once)
-5. useEffect if empty dependency [btnName] => useEffect is called everytime btnName is updated
+5. useEffect if not empty dependency [btnName] => useEffect is called everytime btnName is updated
 6. Create state variables useState variables at starting of the component and not write in outside the component
 7. Don't use useState hook in if or else blocks means inside the conditional statements(if,for, while) and inside the functions
 8. useRouteError is also a hook to know error details(like status, StatuSText etc)
@@ -130,4 +130,24 @@ Namste React 🚀
     - client side routing
     - server side routing
 
+# Let's Get Classy
 
+1. class based component nothing but javascript class that retuens peace of JSX using render()
+2. functional based component nothing but javascript function that retuens peace of JSX
+3. class based component -> class UserClass extends React.Component{}
+4. class component life cycle : constructor() -> render() -> componentDidMount()
+5. While parent and child life cycle : parentConstructor() -> parentRender() -> childConstructor() -> childRender() -> childComponentDidMount() -> parentComponentDidMount()
+6. componentDidMount() used to make an API call
+7.  Parent constructor
+    Parent render
+    
+    Firstchild constructor
+    Firstchild render
+    Secondchild constructor
+    Secondchild render
+
+    <DOM UPDATED - IN A SINGLE BATCH>
+    Firstchild componentDidMount
+    Secondchild componentDidMount
+    parent componentDidMount
+7. ![alt text](<Screenshot 2026-04-13 225754.png>)
