@@ -151,3 +151,7 @@ Namste React 🚀
 8. ![alt text](<Screenshot 2026-04-13 225754.png>)
 9. Mounting means showing on the UI
 10. UnMounting means desabling on to the UI
+
+# Optimizing Our App
+
+1. Custom Hooks
