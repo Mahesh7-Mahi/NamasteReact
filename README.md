@@ -139,13 +139,15 @@ Namste React 🚀
 5. While parent and child life cycle : parentConstructor() -> parentRender() -> childConstructor() -> childRender() -> childComponentDidMount() -> parentComponentDidMount()
 6. componentDidMount() used to make an API call
 7. Parent constructor
-   Parent render
-   Firstchild constructor
-   Firstchild render
-   Secondchild constructor
-   Secondchild render
-   <DOM UPDATED - IN A SINGLE BATCH>
-   Firstchild componentDidMount
-   Secondchild componentDidMount
-   parent componentDidMount
+   1. Parent render
+   2. Firstchild constructor
+   3. Firstchild render
+   4. Secondchild constructor
+   5. Secondchild render
+   6. DOM UPDATED - IN A SINGLE BATCH
+   7. Firstchild componentDidMount
+   8. Secondchild componentDidMount
+   9. parent componentDidMount
 8. ![alt text](<Screenshot 2026-04-13 225754.png>)
+9. Mounting means showing on the UI
+10. UnMounting means desabling on to the UI
