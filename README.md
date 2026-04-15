@@ -154,4 +154,6 @@ Namste React 🚀
 
 # Optimizing Our App
 
-1. Custom Hooks
+1. Custom Hooks -> nothing but normal javascript function 
+2. To optimizing the app Chunking, code Spliting, Dynamic Bundling and Lazy Loading, on demand loading
+3. 
