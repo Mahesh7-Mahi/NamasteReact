@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import Shimmer from "./Shimmer";
 import useRestuarantMenu from "../utils/useRestuarantMenu";
+import RestaurantCategory from "./RestuarantCategory";
 
 const RestaurantMenu = () => {
 
@@ -10,27 +11,52 @@ const RestaurantMenu = () => {
 
   if (resInfo == null) return <Shimmer />;
 
-  const { name, cuisines, costForTwoMessage } =
+  const { name, cuisines, costForTwoMessage, avgRating,totalRatingsString,locality,areaName } =
     resInfo?.data?.cards[2]?.card?.card?.info || {};
 
   const itemCards =
     resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards;
 
+  const catogery = resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+    (card) => card?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+  )
+
   return (
-    <div className="menu">
-      <h1>{name}</h1>
-      <p>{cuisines?.join(", ")} - {costForTwoMessage}</p>
-
-      <h2>Menu</h2>
-
-      <ul>
-        {itemCards?.map((item) => (
-          <li key={item?.card?.info?.id}>
-            {item?.card?.info?.name} - ₹
-            {item?.card?.info?.price / 100 || item?.card?.info?.defaultPrice / 100}
-          </li>
-        ))}
-      </ul>
+    <div>
+      
+    <div className=" gap-1 px-4 py-3 flex flex-col gap-1 mx-50 my-10 bg-gray-50  border-2 border-gray-200 rounded-4xl shadow-md">
+        <h1 className="font-extrabold">{name}</h1>
+        <div className="flex gap-1">
+            <span className="bg-green-600 text-white text-xs px-2 py-[2px] rounded-full w-6 h-6 flex items-center justify-center font-bold">
+              ★
+            </span>
+            <span className="font-semibold">{avgRating}</span>
+            <span className="font-semibold">{"("+totalRatingsString+")"}</span>
+            <span>•</span>
+            <span className="font-semibold">{costForTwoMessage}</span>
+        </div>
+        <div>
+          <p>
+            <span className="font-semibold underline text-orange-500">{cuisines.join(", ")}</span>
+          </p> 
+        </div>
+        <div className="flex gap-3">
+            <span className="font-semibold">Outlate</span>
+            <span className="font-semibold">{locality || areaName}</span>
+        </div>
+        <div>
+          <span className="font-semibold">Closed & not delivering</span>
+        </div>
+        
+    </div>
+    <div className="text-center font-bold">
+      ~ MENU ~
+    </div>
+    {
+      catogery.map((catogery,index) => (
+        <RestaurantCategory key={index} data = {catogery?.card?.card}/>
+      ))
+    }
     </div>
   );
 };

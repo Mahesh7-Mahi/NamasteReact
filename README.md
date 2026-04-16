@@ -156,4 +156,9 @@ Namste React 🚀
 
 1. Custom Hooks -> nothing but normal javascript function 
 2. To optimizing the app Chunking, code Spliting, Dynamic Bundling and Lazy Loading, on demand loading
-3. 
+
+# Data is the new oil
+
+1. Higher order component is a function that takes a component and returns a component
+2. Higher order components used to enhance the component
+
