@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { LOGO_URL } from "../utils/constants";
+import { LOGO_URL,PNG_URL } from "../utils/constants";
 import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import swiggy from "../../public/swiggy.png"
+
 
 const Header = () => {
 
@@ -10,29 +12,29 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" alt="logo" src={LOGO_URL}/>
+    <div className="flex items-center justify-between px-8 py-3 shadow-md bg-white">
+      <div className="">
+        <img src={PNG_URL} className="w-8 h-10" alt="logo" />
       </div>
-      <div className="nav-items">
-        <ul>
-          <li>
-            online status: {onlineStatus? "🟢" : "🔴"}
+      <div className="flex items-center">
+        <ul className="flex px-5">
+          <li className="flex items-center gap-2 cursor-pointer hover:text-black px-4">
+            Online Status: {onlineStatus? "🟢" : "🔴"}
           </li>
-          <li>
+          <li className="flex items-center gap-2 cursor-pointer hover:text-black px-4">
             <Link className="nav-link" to="/">Home</Link>
           </li>
-          <li>
+          <li className="flex items-center gap-2 cursor-pointer hover:text-black px-4">
             <Link className="nav-link" to="/about">About Us</Link>
           </li>
-          <li>
+          <li className="flex items-center gap-2 cursor-pointer hover:text-black px-4">
             <Link className="nav-link" to="/contact">Contact Us</Link>
           </li>
-          <li>
+          <li className="flex items-center gap-2 cursor-pointer hover:text-black px-4">
             <Link className="nav-link" to="/grocery">Grocery</Link>
           </li>
-          <li>Cart</li>
-          <button className="login-btn" onClick={
+          <li className="flex items-center gap-2 cursor-pointer hover:text-black">Cart</li>
+          <button className="align-middle backdrop-blur-lg border border-gray-400 cursor-pointer rounded-lg px-4 py-2 ml-5 h-10" onClick={
             () => {
               btnName == "Login" ? setBtnName("Logout") : setBtnName("Login")
             }
@@ -40,6 +42,9 @@ const Header = () => {
         </ul>
       </div>
     </div>
+
+
+
   );
 };
 

@@ -39,23 +39,25 @@ const Body = () => {
     }
 
   return (
-    <div className="body">
-      <div className="filter">
-        <div className="search">
-          <input type="text" className="search-box" value={searchText} onChange={(e)=>{
+    <div className="">
+      <div className="flex">
+        <div className="m-5">
+          <input type="text" className="border border-gray-400 h-10 rounded-md w-80 shadow-lg px-2" value={searchText} onChange={(e)=>{
             setSearchText(e.target.value);
           }}/>
-          <button className="search-btn" onClick={()=>{
+          <button className="bg-green-100 shadow-lg  cursor-pointer px-4 py-2 mx-2 rounded-lg h-10" onClick={()=>{
             const filteredRestaurants = listOfrestaurants.filter((res) => res?.info?.name?.toLowerCase()?.includes(searchText?.toLowerCase()))
             setfilteredRestaurants(filteredRestaurants)
           }}>Search</button>
         </div>
-        <button className="filter-btn" onClick={()=>{
-            const filteredList = listOfrestaurants.filter((restaurant => restaurant?.info?.avgRating > 4))
-            setfilteredRestaurants(filteredList)
-        }}>Top Rated Restuarant</button>
+        <div className="m-5">
+          <button className=" align-middle font-bold backdrop-blur-lg border border-gray-400 cursor-pointer shadow-lg rounded-lg px-4 py-2 mx-2 h-10" onClick={()=>{
+              const filteredList = listOfrestaurants.filter((restaurant => restaurant?.info?.avgRating > 4))
+              setfilteredRestaurants(filteredList)
+          }}>Top Rated Restuarant</button>
+        </div>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap mx-15 my-15 gap-y-20 justify-evenly">
         {
           filteredRestaurants.map((restaurant) => 
           <Link className="nav-link" key={restaurant?.info?.id} to={"/restaurants/"+ restaurant?.info?.id}><RestaurantCard resData={restaurant}/></Link>
