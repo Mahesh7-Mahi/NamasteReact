@@ -11,10 +11,10 @@ const RestaurantCard = (props) =>{
   } = resData?.info || {}
   return (
     <div className="w-[280px] cursor-pointer mx-10 hover:scale-[0.97] transition duration-200 cursor-pointer bg-white">
-      <div className="relative rounded-2xl overflow-hidden">
+      <div className="relative rounded-2xl">
         <img className="w-full h-[180px] object-cover" src={CDN_URL + resData?.info?.cloudinaryImageId}/>
 
-        <p className="absolute bottom-3 left-3 text-white font-extrabold text-lg">
+        <p className="absolute bottom-3 text-white font-extrabold text-lg">
           {costForTwo}
         </p>
       <div/>
@@ -55,7 +55,7 @@ export const withPromotedLable = (RestaurantCard) => {
   return (props) => {
     return(
       <div>
-        <span className=" absolute bg-black text-white text-xs px-2 py-1 rounded z-10">Promoted</span>
+        <span className="absolute ml-10 bg-black text-white text-xs px-2 py-1 rounded z-10">Promoted</span>
         <RestaurantCard {...props}/>
       </div>
     )
