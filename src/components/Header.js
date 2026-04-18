@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import swiggy from "../../public/swiggy.png"
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 
 const Header = () => {
@@ -14,7 +15,10 @@ const Header = () => {
 
   const {loggedInUser} = useContext(UserContext);
 
-  console.log(loggedInUser)
+  //subscribing to the store using selector to get items from the store
+  const cartItems = useSelector((store) => store.cart.items)
+
+  //console.log(cartItems)
 
   return (
     <div className="flex items-center justify-between px-8 py-3 shadow-md bg-white">
@@ -38,7 +42,9 @@ const Header = () => {
           <li className="flex items-center gap-2 cursor-pointer hover:text-black px-4">
             <Link className="nav-link" to="/grocery">Grocery</Link>
           </li>
-          <li className="flex items-center gap-2 cursor-pointer hover:text-black">Cart</li>
+          <li className="flex items-center gap-2 cursor-pointer hover:text-black">
+            <Link to="/cart">Cart ({cartItems.length} items)</Link>
+          </li>
           <button className="align-middle backdrop-blur-lg border border-gray-400 cursor-pointer rounded-lg px-4 py-2 ml-5 h-10" onClick={
             () => {
               btnName == "Login" ? setBtnName("Logout") : setBtnName("Login")
@@ -48,9 +54,6 @@ const Header = () => {
         </ul>
       </div>
     </div>
-
-
-
   );
 };
 

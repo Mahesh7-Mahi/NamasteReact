@@ -21,7 +21,6 @@ const Body = () => {
         
         const jsonData = await data.json();
 
-        console.log(jsonData);
         setListOfRestaurant(jsonData?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setfilteredRestaurants(jsonData?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
@@ -35,8 +34,6 @@ const Body = () => {
   }
   
     const {loggedInUser,setUserName} = useContext(UserContext);
-
-    console.log(setUserName);
 
     if(listOfrestaurants?.length == 0){
         return <Shimmer />

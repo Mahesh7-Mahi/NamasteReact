@@ -164,3 +164,18 @@ Namste React 🚀
 3. controlled and uncontrolled components
 4. props drilling 
 
+# Let's Bild Our Store
+
+1. Redux used to manage application state and data
+2. Redux offers easy debugging and state management
+3. Redux Dev tools used to debug our applications
+4. Redux store is very big javascript object that will store in huge data and it will kept in centarl globally space
+5. Redux Architecture
+![alt text](image.png)
+
+6. Redux ToolKit
+    - install Redux toolkit -> install @reduxjs/toolkit and react-redux (npm i @reduxjs/toolkit)
+    - Build our store
+
+
+
