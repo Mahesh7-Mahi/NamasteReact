@@ -4,7 +4,9 @@
   "description": "namaste react by mahesh reddy",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "test": "jest",
+    "watch-test": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,15 @@
   },
   "homepage": "https://github.com/Mahesh7-Mahi/NamasteReact#readme",
   "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
+    "@babel/preset-react": "^7.28.5",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "autoprefixer": "^10.5.0",
+    "babel-jest": "^30.3.0",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
     "parcel": "^2.16.4",
     "postcss": "^8.5.9",
     "tailwindcss": "^4.2.2"
@@ -31,7 +41,7 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.14.0"
+    "react-router-dom": "^6.30.3"
   },
   "browserslist": [
     "last 2 versions"

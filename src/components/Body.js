@@ -1,7 +1,7 @@
 import RestaurantCard, { withPromotedLable } from "./RestaurantCard";
 import { useState,useEffect,useContext } from "react";
 import Shimmer from "./Shimmer";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 
@@ -45,7 +45,7 @@ const Body = () => {
     <div className="">
       <div className="flex">
         <div className="m-5">
-          <input type="text" className="border border-gray-400 h-10 rounded-md w-80 shadow-lg px-2" value={searchText} onChange={(e)=>{
+          <input type="text" className="border border-gray-400 h-10 rounded-md w-80 shadow-lg px-2" value={searchText} data-testid="searchInput" onChange={(e)=>{
             setSearchText(e.target.value);
           }}/>
           <button className="bg-green-100 shadow-lg  cursor-pointer px-4 py-2 mx-2 rounded-lg h-10" onClick={()=>{
@@ -60,9 +60,9 @@ const Body = () => {
         </div>
         <div className="m-5">
           <button className=" align-middle font-bold backdrop-blur-lg border border-gray-400 cursor-pointer shadow-lg rounded-lg px-4 py-2 mx-2 h-10" onClick={()=>{
-              const filteredList = listOfrestaurants.filter((restaurant => restaurant?.info?.avgRating > 4))
+              const filteredList = listOfrestaurants.filter((restaurant => restaurant?.info?.avgRating > 4.5))
               setfilteredRestaurants(filteredList)
-          }}>Top Rated Restuarant</button>
+          }}>Top Rated Restaurants</button>
         </div>
       </div>
       <div className="flex flex-wrap mx-15 my-15 gap-y-20 justify-evenly">

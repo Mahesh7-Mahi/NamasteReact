@@ -176,6 +176,30 @@ Namste React 🚀
 6. Redux ToolKit
     - install Redux toolkit -> install @reduxjs/toolkit and react-redux (npm i @reduxjs/toolkit)
     - Build our store
+    - Connect our store to our app
+    - Slice(cartSlice)
+    - dispatch(action)
+    - Selector
 
+# Types of testing (developer)
+
+1. Unit Testing 
+2. Integration Testing
+3. End to End Testing
+4. Jest is used to test react library
+
+# Setting up Testing in our app
+
+1. Install React Testing Library -> npm i -D @testing-library/react
+2. Installed jest -> npm i -D jest
+3. Installed Babel dependencies -> npm install --save-dev babel-jest @babel/core @babel/preset-env
+4. Configure Babel -> create -> babel.config.js
+5. Configure parcel config file to disable default babel transpilation -> create -> .parcelrc
+6. Jest configuration -> npx create-jest
+7. Install jsdom library -> npm install --save-dev jest-environment-jsdom
+9. Install @babel/preset-react - to make jsx work in test cases
+10. Include @babel/preset-react inside my babel config
+11. Install @testing-library/jest-dom
+12. to run all the testcases whenever we made changes -> npm run watch-test
 
 

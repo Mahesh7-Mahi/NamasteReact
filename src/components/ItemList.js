@@ -14,7 +14,7 @@ const ItemList = ({items}) => {
     return(
     <div className=" text-center">
         {items.map((item,index) => (
-        <div key={index} className="p-2 m-2 border-gray-200 py-8 border-b-2 flex justify-between items-start">
+        <div data-testid="fooditems" key={index} className="p-2 m-2 border-gray-200 py-8 border-b-2 flex justify-between items-start">
             <div className="text-left w-3/4">
                 <span className="font-semibold">{item?.card?.info?.name}</span>
                 <p className="font-semibold"> ₹ {item?.card?.info?.price / 100 || item?.card?.info?.defaultPrice / 100}</p>
